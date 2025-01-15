@@ -54,7 +54,7 @@ function SignUp() {
     }else if(username === ""){
         alert("사용자 명을 입력해주세요")
     }else{
-        alert("회원기입 성공!")
+        alert("회원가입 성공!")
         navigate("/main")
     }
     
@@ -64,7 +64,7 @@ function SignUp() {
     <div className="wrapper_SignUp">
       <div className="SignUP">
         <div className="SignUp_Title">
-          WelCome To Kimbob World !
+          your Welcome !
         </div>
       </div>
         <div className="SignUp_Form">
