@@ -80,7 +80,7 @@ function LoginPage() {
           </span>
           </div> */} 
           <div className='Clover_login'>
-            <button className='login_btn' onClick={() => handleClickLogin()}>Clover 로그인</button>
+            <button className='login_btn' onClick={() => handleClickLogin()}>Login</button>
             <button className='sign_up' onClick={() => navigate("/signup")}>회원가입</button>
           </div>
       </div>
