@@ -20,12 +20,12 @@ function SignUp() {
   const [signForm, setSignForm] = useState<signForm>({
     username: "",
     code: "",
-    password1: "",
+    password: "",
     password2: "",
   })
   const [error, setError] = useState()
 
-  const { username, code, password1, password2 } = signForm
+  const { username, code, password, password2 } = signForm
 
   const handleChangeInput = (e) => {
     const { name, value } = e.target;
@@ -47,7 +47,7 @@ function SignUp() {
     //     setError(error.response.data)
     //     alert("입력값이 잘못됐어요!")
     //   })
-    if(password1 !== password2){
+    if(password !== password2){
         alert("비밀번호가 다릅니다")
     }else if(code !== Adcode){
         alert("코드가 틀렸습니다")
@@ -92,11 +92,11 @@ function SignUp() {
             onChange={handleChangeInput}
             placeholder="Password"
             type="password"
-            name="password1"
-            value={password1} />
-             {error && error.password1 !== undefined && (
+            name="password"
+            value={password} />
+             {/* {error && error.password !== undefined && (
             <span>이메일과 비슷한단어가 포함됐거나 8글자 이상 영어와 숫자를 포함되지않앗습니다</span>
-          )}
+          )} */}
 
           <label>비밀번호 확인</label>
           <input className="signup_inputpassword_confirm"
@@ -105,16 +105,16 @@ function SignUp() {
             name="password2"
             type='password'
             value={password2} />
-             {error && error.code !== undefined && (
+             {/* {error && error.code !== undefined && (
             <span>위 패스워드와 동일한 패스워드를 입력해주세요.</span>
-          )}
+          )} */}
 
         </div>
       <div className="SignUp_btn">
         <button
           onClick={() => onClickSignUpBtn()}
           className="SignUp_text"
-          type="subit">
+          type="submit">
           가입하기
         </button>
       </div>
